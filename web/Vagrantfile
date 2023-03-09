@@ -3,4 +3,9 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/jammy64"
+  
+  config.vm.provider "virtualbox" do |vb|
+     vb.memory = 3072
+	 vb.cpus = 4
+  end
 end
